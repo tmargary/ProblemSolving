@@ -60,5 +60,8 @@ def productExceptSelf(nums: List[int]) -> List[int]:
 
 
 if __name__ == '__main__':
+    # time complexity: O(n)
+    # space complexity: O(n)
+
     nums = [1, 2, 3, 4]
     print(productExceptSelf(nums))

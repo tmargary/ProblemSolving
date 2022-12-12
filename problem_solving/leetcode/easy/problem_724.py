@@ -67,5 +67,7 @@ def pivotIndex(nums: List[int]) -> int:
 
 
 if __name__ == '__main__':
+    # time complexity: O(n)
+    # space complexity: O(n)
     nums = [1, 7, 3, 6, 5, 6]
     print(pivotIndex(nums))
