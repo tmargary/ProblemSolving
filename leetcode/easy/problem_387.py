@@ -14,15 +14,9 @@ def firstUniqChar(s: str) -> int:
         else:
             d[ch] = 1
 
-    non_rep_char = None
-    for el, val in d.items():
-        if val <= 1:
-            non_rep_char = el
-            break
-
-    for i, ch in enumerate(s):
-        if ch == non_rep_char:
-            return i
+    for idx, ch in enumerate(s):
+        if d[ch] == 1:
+            return idx
     return -1
 
 
