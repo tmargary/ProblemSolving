@@ -5,8 +5,9 @@ Count the number of 1 bits
 
 def solution(x):
     cnt = 0
+    x = abs(x)  # because in Python, -1 is '-0b1'. Check with bin(-1)
     while x != 0:
-        if x & 1 == 1:  # if number is even
+        if x & 1 == 1:  # if number is odd, meaning the 1 bit is at the first position, ready for removal
             cnt += 1
         x = x >> 1
 
