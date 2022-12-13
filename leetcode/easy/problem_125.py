@@ -29,11 +29,16 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 
 
 def isPalindrome(s: str) -> bool:
+    """
+    Given a string s, return true if it is a palindrome, or false otherwise.
+    """
     word = [x for x in s.lower() if x.isalpha() or x.isdigit()]
     return word == word[::-1]
 
 
 if __name__ == '__main__':
+    # Time complexity: O(n)
+    # Space complexity: O(n)
     s = "A man, a plan, a canal: Panama"
     assert isPalindrome(s) is True
     s = "race a car"

@@ -24,6 +24,9 @@ from typing import List
 
 
 def singleNonDuplicate(nums: List[int]) -> int:
+    """
+    Return the single element that appears only once.
+    """
     length = len(nums)
 
     if length == 1:
@@ -43,6 +46,9 @@ def singleNonDuplicate(nums: List[int]) -> int:
 
 
 if __name__ == '__main__':
+    # Time complexity: O(nlog(n))
+    # Space complexity: O(1)
+
     nums = [1, 1, 2]
     assert singleNonDuplicate(nums) == 2
 

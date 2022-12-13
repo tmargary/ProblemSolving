@@ -21,6 +21,8 @@ def firstUniqChar(s: str) -> int:
 
 
 if __name__ == '__main__':
+    # Time complexity: O(n)
+    # Space complexity: O(n)
     assert firstUniqChar("leetcode") == 0
     assert firstUniqChar("loveleetcode") == 2
     assert firstUniqChar("aabb") == -1

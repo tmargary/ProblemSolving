@@ -22,4 +22,6 @@ def solution(n, i, j):
 
 
 if __name__ == '__main__':
+    # Time complexity: O(1)
+    # Space complexity: O(1)
     assert solution(37, i=2, j=6) == 33  # 00100101 -> 00100001

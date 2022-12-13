@@ -27,6 +27,9 @@ from typing import List
 
 
 def singleNumber(nums: List[int]) -> int:
+    """
+    Return the single value in the list
+    """
     d = dict()
 
     for el in nums:
@@ -41,5 +44,7 @@ def singleNumber(nums: List[int]) -> int:
 
 
 if __name__ == '__main__':
+    # Time complexity: O(n)
+    # Space complexity: O(n)
     assert singleNumber([2, 2, 1]) == 1
     assert singleNumber([1]) == 1

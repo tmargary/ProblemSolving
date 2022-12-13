@@ -20,6 +20,8 @@ def solution(x):
 
 
 if __name__ == '__main__':
+    # Time complexity: O(n)
+    # Space complexity: O(1)
     assert solution(0) == 'none'
     assert solution(1) == 'odd'
     assert solution(3) == 'even'
