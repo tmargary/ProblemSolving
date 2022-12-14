@@ -74,6 +74,7 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
 
@@ -89,20 +90,28 @@ class Solution:
             currentB = currentB.next
             lenB += 1
 
+        # if the last node is not the same, return None
         if hex(id(currentA)) != hex(id(currentB)):
             return None
         else:
             intersectVal = currentA
-
-            for loop_cntA, loop_cntB in zip(range(lenA, -1, -1), range(lenB, -1, -1)):
-                currentA, currentB = headA, headB
-                for i in range(loop_cntA):
+            ###############################################
+            # Truncate the longest array from the start (right-align)
+            len_diff = lenA - lenB
+            currentA, currentB = headA, headB
+            if len_diff > 0:
+                for i in range(abs(len_diff)):
                     currentA = currentA.next
-                for i in range(loop_cntB):
+            else:
+                for i in range(abs(len_diff)):
                     currentB = currentB.next
 
+            # Traverse the truncated linked list until you find the first match
+            # (after that it's guaranteed that the rest is the same)
+            for _ in range(min(lenA, lenB)):
                 if hex(id(currentA)) == hex(id(currentB)):
                     intersectVal = currentA
-                else:
                     break
+                else:
+                    currentA, currentB = currentA.next, currentB.next
             return intersectVal
