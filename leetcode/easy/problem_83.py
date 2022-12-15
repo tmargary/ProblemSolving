@@ -19,7 +19,7 @@ class ListNode:
 class Solution:
     """
     time complexity: O(n)
-    space complexity: O(n)
+    space complexity: O(1)
     """
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
         current = head
