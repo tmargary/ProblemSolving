@@ -76,6 +76,10 @@ class ListNode:
 
 
 class Solution:
+    """
+    time complexity: O(n)
+    space complexity: O(n)
+    """
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
 
         lenA, lenB = 1, 1
