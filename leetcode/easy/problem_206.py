@@ -32,8 +32,10 @@ class MySolution:
         reverse_val = list()
 
         while current:
-            reverse_val.insert(0, current.val)
+            reverse_val.append(current.val)
             current = current.next
+
+        reverse_val = reverse_val[::-1]
 
         if len(reverse_val) == 0:
             return None
