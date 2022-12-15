@@ -14,7 +14,7 @@ def solution(x):
 
 
 if __name__ == '__main__':
-    # Time complexity: O(n)
+    # Time complexity: O(log(n))
     # Space complexity: O(1)
     assert solution(0) == 0
     assert solution(1) == 1
