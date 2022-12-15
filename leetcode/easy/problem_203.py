@@ -18,7 +18,7 @@ class ListNode:
 class Solution:
     """
     time complexity: O(n)
-    space complexity: O(n)
+    space complexity: O(1)
     """
     def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
 
