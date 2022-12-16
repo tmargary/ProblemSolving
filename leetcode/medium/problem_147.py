@@ -28,7 +28,7 @@ class ListNode:
         self.next = next
 
 
-class Solution:
+class BadSolution:
 
     def create_List(self, lst):
         current = dummy = ListNode(lst[0])
@@ -60,3 +60,31 @@ class Solution:
         new_list = self.create_List(lst)
 
         return new_list
+
+
+class BaggySolution:
+
+    def insertionSortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+
+        dummy = ListNode(None, head)
+        sorted_list = dummy.next
+        prev, current = dummy, dummy.next
+
+        cnt = 0
+        while current.next:
+            cnt += 1
+            prev, current = current, current.next
+
+            if current.val >= prev.val:
+                continue
+
+            for i in range(cnt):
+                start_over = sorted_list
+                if current.val < start_over.val:
+                    prev.next = current.next
+                    current.next = start_over.next
+                    start_over.next = current
+                    start_over = start_over.next
+                    break
+
+        return sorted_list
