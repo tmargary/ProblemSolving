@@ -36,7 +36,7 @@ nums1.
 from typing import List
 
 
-class Solution:
+class SolutionOn2:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
         Do not return anything, modify nums1 in-place instead.
@@ -55,5 +55,44 @@ class Solution:
                 nums1.insert(m, n2)
                 m += 1
                 nums1.pop()
+
+        return None
+
+
+class SolutionOn:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+
+        if n == 0:
+            return None
+
+        sorted_list = list()
+        length = m + n
+
+        i, j = 0, 0
+
+        for _ in range(length):
+            n1 = nums1[i] if i < m else None
+            n2 = nums2[j] if j < n else None
+            if n1 is not None and n2 is not None:
+                if n1 < n2 and i < m and j < n:
+                    sorted_list.append(nums1[i])
+                    i += 1
+                elif n1 >= n2 and j < n:
+                    sorted_list.append(n2)
+                    j += 1
+            elif n1 is None:
+                sorted_list.append(n2)
+                j += 1
+            elif n2 is None:
+                sorted_list.append(n1)
+                i += 1
+            else:
+                sorted_list.append(n2)
+
+        for i in range(len(nums1)):
+            nums1[i] = sorted_list[i]
 
         return None
