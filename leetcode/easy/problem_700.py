@@ -17,7 +17,7 @@ class TreeNode:
         self.right = right
 
 
-class Solution:
+class MySolution1:
 
     def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
 
@@ -35,3 +35,27 @@ class Solution:
 
             if root.val == val:
                 return root
+
+
+class MySolution2:
+
+    def rec_search(self, root: Optional[TreeNode], val: int):
+        if root is None:
+            return None
+        elif root.val == val:
+            return root
+        else:
+            if val < root.val:
+                root = root.left
+            else:
+                root = root.right
+            if root is None:
+                return None
+            return self.rec_search(root, val)
+
+    def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
+
+        if root.val == val:
+            return root
+
+        return self.rec_search(root, val)
