@@ -84,7 +84,6 @@ class BuggySolution:
                     prev.next = current.next
                     current.next = start_over.next
                     start_over.next = current
-                    start_over = start_over.next
                     break
 
         return sorted_list

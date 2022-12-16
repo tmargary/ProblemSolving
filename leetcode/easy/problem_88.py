@@ -94,3 +94,39 @@ class SolutionOn:
             nums1[i] = sorted_list[i]
 
         return None
+
+def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+    """
+    Do not return anything, modify nums1 in-place instead.
+    """
+
+    if n == 0:
+        return None
+
+    j = n - 1
+    for i in range(len(nums1) - 1, -1, -1):
+        if i > m:
+            nums1[i] = nums2[j]
+            j -= 1
+        elif n == 1:
+            nums1[i] = nums2[j]
+        else:
+            if nums2[j] <= nums1[i]:
+                nums1[i], nums1[i + 1] = nums2[j], nums1[i]
+                j -= 1
+    print(nums1)
+    return None
+
+
+if __name__ == '__main__':
+    a = [1, 2, 3, 0, 0, 0]
+    m = 3
+    b = [2, 5, 6]
+    n = 3
+    merge(a, m, b, n)
+
+    a = [0]
+    m = 0
+    b = [1]
+    n = 1
+    merge(a, m, b, n)
