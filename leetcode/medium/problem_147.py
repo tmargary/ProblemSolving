@@ -62,7 +62,7 @@ class BadSolution:
         return new_list
 
 
-class BaggySolution:
+class BuggySolution:
 
     def insertionSortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 
