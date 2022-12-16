@@ -89,8 +89,6 @@ class SolutionOn:
             elif n2 is None:
                 sorted_list.append(n1)
                 i += 1
-            else:
-                sorted_list.append(n2)
 
         for i in range(len(nums1)):
             nums1[i] = sorted_list[i]
