@@ -62,28 +62,23 @@ class BadSolution:
         return new_list
 
 
-class BuggySolution:
-
+class Solution:
+    # TODO: This is Anna's solution. Walk through the code.
     def insertionSortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if head == None:
+            return head
 
-        dummy = ListNode(None, head)
-        sorted_list = dummy.next
-        prev, current = dummy, dummy.next
+        newList = ListNode(None, head)
+        cur = head.next
+        head.next = None
 
-        cnt = 0
-        while current.next:
-            cnt += 1
-            prev, current = current, current.next
+        while cur:
+            head = newList
+            while head.next and cur.val > head.next.val:
+                head = head.next
+            ptr = cur.next
+            cur.next = head.next
+            head.next = cur
+            cur = ptr
 
-            if current.val >= prev.val:
-                continue
-
-            for i in range(cnt):
-                start_over = sorted_list
-                if current.val < start_over.val:
-                    prev.next = current.next
-                    current.next = start_over.next
-                    start_over.next = current
-                    break
-
-        return sorted_list
+        return newList.next

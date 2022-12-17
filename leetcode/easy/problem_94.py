@@ -15,7 +15,8 @@ class TreeNode:
 
 
 class Solution:
-    results = None
+
+    results = list()
 
     def rec(self, root):
         if root:
@@ -24,6 +25,5 @@ class Solution:
             self.rec(root.right)
 
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        self.results = list()
         self.rec(root)
         return self.results
