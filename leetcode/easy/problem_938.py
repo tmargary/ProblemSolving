@@ -28,7 +28,7 @@ class TreeNode:
         self.right = right
 
 
-class Solution:
+class SolutionItr:
     def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
 
         stack = [root]
@@ -48,3 +48,22 @@ class Solution:
                 stack.append(curr.left)
             if curr.right:
                 stack.append(curr.right)
+
+
+class SolutionRec:
+
+    sum_ = 0
+
+    def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
+
+        if not root:
+            return 0
+
+        if low <= root.val <= high:
+            l = self.rangeSumBST(root.left, low, high)
+            r = self.rangeSumBST(root.right, low, high)
+            return root.val + l + r
+        elif root.val < low:
+            return self.rangeSumBST(root.right, low, high)
+        else:
+            return self.rangeSumBST(root.left, low, high)
