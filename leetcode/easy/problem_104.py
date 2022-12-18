@@ -18,22 +18,21 @@ class TreeNode:
 
 
 class Solution:
-    max_depth = 0
+    length = 0
 
     def rec(self, node, length):
-        if not node:
-            return 0
-        if not node.left and not node.right:
-            self.max_depth = max(self.max_depth, length)
+        if node is None:
+            return length
 
-        self.rec(node.left, self.max_depth + 1)
-        self.rec(node.right, self.max_depth + 1)
+        length = max(
+            self.rec(node.left, length + 1),
+            self.rec(node.right, length + 1)
+        )
+
+        self.length = max(length, self.length)
+        return self.length
 
     def maxDepth(self, root: Optional[TreeNode]) -> int:
+        self.rec(root, self.length)
 
-        if not root:
-            return 0
-
-        self.rec(root, self.max_depth)
-
-        return self.max_depth + 1
+        return self.length
