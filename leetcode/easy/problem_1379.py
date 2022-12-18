@@ -30,7 +30,7 @@ class TreeNode:
         self.right = None
 
 
-class Solution:
+class SolutionItr:
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
 
         stack = [[original, cloned]]
@@ -43,3 +43,17 @@ class Solution:
                 stack.append([curr[0].left, curr[1].left])
             if curr[0].right:
                 stack.append([curr[0].right, curr[1].right])
+
+
+class SolutionRec:
+    def getTargetCopy(self, original, cloned, target):
+        if not original:
+            return None
+
+        if original == target:
+            return cloned
+
+        l = self.getTargetCopy(original.left, cloned.left, target)
+        r = self.getTargetCopy(original.right, cloned.right, target)
+
+        return l or r
