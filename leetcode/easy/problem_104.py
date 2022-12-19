@@ -18,6 +18,9 @@ class TreeNode:
 
 
 class Solution:
+    # Time complexity: O(n)
+    # Space complexity: O(n)
+
     length = 0
 
     def rec(self, node, length):
