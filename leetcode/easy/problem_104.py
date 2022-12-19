@@ -27,12 +27,12 @@ class Solution:
         if node is None:
             return length
 
-        length = max(
-            self.rec(node.left, length + 1),
-            self.rec(node.right, length + 1)
-        )
-
-        self.length = max(length, self.length)
+        self.length = max(
+            max(
+                self.rec(node.left, length + 1),
+                self.rec(node.right, length + 1)
+            ),
+            self.length)
         return self.length
 
     def maxDepth(self, root: Optional[TreeNode]) -> int:
