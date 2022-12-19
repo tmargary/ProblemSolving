@@ -34,7 +34,7 @@ class TreeNode:
 
 class Solution:
     # Time complexity: O(n)
-    # Time complexity: O(n)
+    # Space complexity: O(n)
     def mergeTrees(self, t1: TreeNode, t2: TreeNode) -> TreeNode:
 
         if t1 and not t2:
