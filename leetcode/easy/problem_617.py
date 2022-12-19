@@ -48,7 +48,7 @@ class Solution:
         while stack:
             cur = stack.pop()
 
-            # if either the left and right does not exist, start over, else calc the sum
+            # if either the left and right does not exist, continue, else calc the sum
             if cur[0] == None or cur[1] == None:
                 continue
             else:
