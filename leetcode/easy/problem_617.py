@@ -48,11 +48,11 @@ class Solution:
         while stack:
             cur = stack.pop()
 
-            # if either the left and right does not exist, continue, else calc the sum
+            # if either the left or right does not exist, skip the current iteration
             if cur[0] == None or cur[1] == None:
                 continue
-            else:
-                cur[0].val += cur[1].val
+
+            cur[0].val += cur[1].val
 
             # if left's left doesn't exist, assign the right's left node
             if cur[0].left == None:
