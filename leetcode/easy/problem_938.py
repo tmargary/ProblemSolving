@@ -51,7 +51,6 @@ class SolutionItr:
 
 
 class SolutionRec:
-
     sum_ = 0
 
     def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
