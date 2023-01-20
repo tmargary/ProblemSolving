@@ -39,20 +39,21 @@ give this your best shot. If after REALLY trying you're still stuck, you can cli
 solution.txt file to see our reference solution.
 */
 
-
 #include <iostream>
-#include "exercise.h"
 
-bool is_collection_sorted(int numbers[], unsigned int collection_size){
+bool is_collection_sorted(int numbers[], unsigned int collection_size)
+{
 
     bool sorted = true;
 
-    for (int i=0; i<collection_size-2; ++i){
-        if (numbers[i] > numbers[i+1]){
+    for (int i = 0; i < collection_size - 2; ++i)
+    {
+        if (numbers[i] > numbers[i + 1])
+        {
             sorted = false;
             break;
         }
     }
 
-  return sorted;
+    return sorted;
 }
