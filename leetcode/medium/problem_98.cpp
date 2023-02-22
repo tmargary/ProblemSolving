@@ -47,3 +47,25 @@ public:
                isValidBSTHelper(node->right, node, maxNode);
     }
 };
+
+
+/*
+This fails to pass some tests but it's more readable.
+
+class Solution {
+public:
+    bool isValidBST(TreeNode* root) {
+        return isValidBSTHelper(root);
+    }
+    
+    bool isValidBSTHelper(TreeNode* root, int min_val = INT_MIN, int max_val = INT_MAX) {
+        if (!root) {
+            return true;
+        }
+        if (root->val <= min_val || root->val >= max_val) {
+            return false;
+        }
+        return isValidBSTHelper(root->left, min_val, root->val) && isValidBSTHelper(root->right, root->val, max_val);
+    }
+};
+*/
