@@ -1,7 +1,7 @@
 # ProblemSolving
 Solving LeetCode and related problems
 
-[1. Two Sum](https://github.com/tmargary/ProblemSolving/blob/main/leetcode/easy/problem_1.cpp)
+[1. Two Sum](https://github.com/tmargary/ProblemSolving/blob/main/leetcode/easy/problem_1.cpp)<\b>
 [104. Maximum Depth of Binary Tree](https://github.com/tmargary/ProblemSolving/blob/main/leetcode/easy/problem_104.py)
 [110. Balanced Binary Tree](https://github.com/tmargary/ProblemSolving/blob/main/leetcode/easy/problem_110.cpp)
 [110. Balanced Binary Tree](https://github.com/tmargary/ProblemSolving/blob/main/leetcode/easy/problem_110.py)
