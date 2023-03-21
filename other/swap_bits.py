@@ -1,4 +1,6 @@
-
+"""
+Swap bits
+"""
 
 def solution(n, i, j):
     """
