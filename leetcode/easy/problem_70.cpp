@@ -26,7 +26,9 @@ Explanation: There are three ways to climb to the top.
 
 */
 
-class Solution {
+#include <vector>
+
+class Solution1 {
 public:
     int climbStairs(int n) {
         int one = 1;
@@ -40,5 +42,27 @@ public:
             two = tmp;
         }
         return one;
+    }
+};
+
+class Solution2 {
+public:
+    int solve(int n, std::vector<int> &v) {
+        if (v[n] != 0)
+        {
+            return v[n];
+        }
+        if (n == 1 || n == 0)
+        {
+            return n;
+        }
+        int result = solve(n - 1, v) + solve(n - 2, v);
+        v[n] = result;
+        return result;
+    }
+
+    int climbStairs(int n) {
+        std::vector<int> v (n + 2);
+        return solve(n+1, v);
     }
 };
