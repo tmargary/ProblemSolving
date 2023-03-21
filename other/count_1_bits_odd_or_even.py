@@ -1,9 +1,8 @@
+"""
+Count whether the number of 1 bits is odd or even
+"""
 
 def solution(x):
-    """
-    Count whether the number of 1 bits is odd or even
-    """
-
     cnt = 0
     x = abs(x)  # because in Python, -1 is '-0b1'. Check with bin(-1)
     while x != 0:
