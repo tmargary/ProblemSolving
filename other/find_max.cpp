@@ -1,4 +1,3 @@
- 
 /*
 Where does the big guy live?
 You are given an array of integers and your job is to figure out the address where the maximum element in the array lives. For example, given
