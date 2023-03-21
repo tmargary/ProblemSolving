@@ -1,9 +1,8 @@
-
+"""
+Reverses bits
+"""
 
 def solution(n):
-    """
-    Reverses bits
-    """
     return n ^ (~0)
 
 
