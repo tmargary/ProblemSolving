@@ -1,3 +1,7 @@
+/*
+Print triagles using a for loop
+*/
+
 #include <iostream>
 
 void printTri1(int n){
