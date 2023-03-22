@@ -1,7 +1,7 @@
 # ProblemSolving
 Solving LeetCode and related problems
 
-| Problem Category | Language | Problem Number | Problem Title |
+| Problem Number | Problem Category | Language | Problem Title |
 |------------------|----------|----------------|---------------|
 | 1 | easy | ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) | [Two Sum](https://github.com/tmargary/ProblemSolving/blob/main/leetcode/easy/problem_1.cpp) |
 | 104 | easy | ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) | [Maximum Depth of Binary Tree](https://github.com/tmargary/ProblemSolving/blob/main/leetcode/easy/problem_104.py) |
