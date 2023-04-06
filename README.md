@@ -1,4 +1,4 @@
-# ProblemSolving
+# Leetcode | My solutions
 Solving LeetCode and related problems
 
 | N | Problem Number | Problem Category | Language | Problem Title |
