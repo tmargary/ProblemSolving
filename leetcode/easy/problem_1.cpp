@@ -26,17 +26,22 @@ Output: [0,1]
 # TODO:  Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 */
 
-class Solution {
+class Solution
+{
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
+    vector<int> twoSum(vector<int> &nums, int target)
+    {
 
-    for (int i = 0; i < nums.size(); ++i){
-        for (int j = 0; j < nums.size(); ++j){
-            if (i!=j && nums[i]+nums[j]==target){
-                return {i, j};
-            }
+        unordered_map<int, int> visited;
+
+        for (int i = 0; i < nums.size(); ++i)
+        {
+            int diff = target - nums[i];
+            if (auto s = visited.find(diff); s != visited.end())
+                return {i, visited[diff]};
+            else
+                visited[nums[i]] = i;
         }
-    }
-    return {0, 0};
+        return {-1, -1};
     }
 };
