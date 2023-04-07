@@ -30,20 +30,32 @@ Output: [1,2]
 Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
 */
 
-class Solution {
+class Solution
+{
 public:
-    vector<int> twoSum(vector<int>& numbers, int target) {
+    vector<int> twoSum(vector<int> &numbers, int target)
+    {
 
         int sum;
         int n1 = 0;
-        int n2 = numbers.size()-1;
+        int n2 = numbers.size() - 1;
 
-        while (n1 < n2){
+        while (n1 < n2)
+        {
             sum = numbers[n1] + numbers[n2];
-            if (sum < target) {n1++;}
-            else if (sum > target) {n2--;}
-            else if (sum == target) {return {n1+1, n2+1};}
+            if (sum < target)
+            {
+                n1++;
+            }
+            else if (sum > target)
+            {
+                n2--;
+            }
+            else if (sum == target)
+            {
+                return {n1 + 1, n2 + 1};
+            }
         }
-    return {0, 0};
+        return {0, 0};
     }
 };
