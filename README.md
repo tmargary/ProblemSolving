@@ -1,8 +1,8 @@
 # Leetcode | My solutions
-Solving LeetCode and related problems
+Solving LeetCode and related problems 
 
-| N | Problem Number | Problem Category | Language | Problem Title |
-|---|----------------|------------------|----------|---------------|
+| N | Problem Number | Problem Category | Language | Problem Title  |
+|---|----------------|------------------|----------|----------------|
 | 0 | 1 | easy | ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) | [Two Sum](https://github.com/tmargary/ProblemSolving/blob/main/leetcode/easy/problem_1.cpp) |
 | 1 | 104 | easy | ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) | [Maximum Depth of Binary Tree](https://github.com/tmargary/ProblemSolving/blob/main/leetcode/easy/problem_104.py) |
 | 2 | 110 | easy | ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) | [Balanced Binary Tree](https://github.com/tmargary/ProblemSolving/blob/main/leetcode/easy/problem_110.cpp) |
